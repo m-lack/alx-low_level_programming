@@ -6,7 +6,7 @@ int main(void)
 
     while (digit <= 9)
     {
-        putchar(digit + '0'); // Convert digit to ASCII and print
+        putchar(digit + '0'); 
         digit++;
     }
 

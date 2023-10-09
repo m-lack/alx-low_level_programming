@@ -6,7 +6,7 @@ int main(void)
 
     while (digit <= 9)
     {
-        putchar(digit + 48); // Convert digit to ASCII and print
+        putchar(digit + 48);
         digit++;
     }
 

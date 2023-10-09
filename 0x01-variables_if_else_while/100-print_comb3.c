@@ -10,9 +10,9 @@ int main(void)
         digit2 = digit1 + 1;
         while (digit2 <= 9)
         {
-            putchar(digit1 + '0'); // Convert digits to ASCII and print
+            putchar(digit1 + '0'); 
             putchar(digit2 + '0');
-            
+
             if (digit1 != 8 || digit2 != 9)
             {
                 putchar(',');

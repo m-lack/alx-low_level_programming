@@ -13,7 +13,7 @@ int main(void)
             digit3 = digit2 + 1;
             while (digit3 <= 9)
             {
-                putchar(digit1 + '0'); // Convert digits to ASCII and print
+                putchar(digit1 + '0');
                 putchar(digit2 + '0');
                 putchar(digit3 + '0');
 
