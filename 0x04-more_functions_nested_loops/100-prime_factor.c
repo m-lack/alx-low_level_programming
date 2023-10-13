@@ -5,7 +5,7 @@ int is_prime(long n) {
     if (n <= 1) {
         return 0;
     }
-    
+
     if (n <= 3) {
         return 1;
     }
@@ -14,7 +14,8 @@ int is_prime(long n) {
         return 0;
     }
 
-    for (long i = 5; i * i <= n; i += 6) {
+    long i;
+    for (i = 5; i * i <= n; i += 6) {
         if (n % i == 0 || n % (i + 2) == 0) {
             return 0;
         }
@@ -31,7 +32,8 @@ long largest_prime_factor(long n) {
         n /= 2;
     }
 
-    for (long i = 3; i <= sqrt(n); i += 2) {
+    long i;
+    for (i = 3; i <= sqrt(n); i += 2) {
         while (n % i == 0) {
             largest = i;
             n /= i;
@@ -48,7 +50,7 @@ long largest_prime_factor(long n) {
 int main() {
     long number = 612852475143;
     long largest = largest_prime_factor(number);
-    
+
     printf("%ld\n", largest);
 
     return 0;
