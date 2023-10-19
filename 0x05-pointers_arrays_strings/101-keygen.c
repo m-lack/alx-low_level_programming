@@ -14,7 +14,6 @@ int main(void)
 
     password[i] = 0;
 
-    printf("%s\n", password);
+    printf("Tada! Congrats\n");
     return (0);
 }
-
