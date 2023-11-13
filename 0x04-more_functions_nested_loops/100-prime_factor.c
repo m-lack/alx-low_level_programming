@@ -2,6 +2,8 @@
 #include <math.h>
 
 int is_prime(long n) {
+    long i;  // Move the declaration to the beginning of the block
+
     if (n <= 1) {
         return 0;
     }
@@ -14,7 +16,6 @@ int is_prime(long n) {
         return 0;
     }
 
-    long i;
     for (i = 5; i * i <= n; i += 6) {
         if (n % i == 0 || n % (i + 2) == 0) {
             return 0;
