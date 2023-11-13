@@ -9,13 +9,13 @@
  */
 void print_args(int argc, char *argv[])
 {
-	int i;
+    int i;
 
-	for (i = 0; i < argc; i++)
-	{
-		_puts(argv[i]);
-		_putchar('\n');
-	}
+    for (i = 0; i < argc; i++)
+    {
+        _puts(argv[i]);
+        _putchar('\n');
+    }
 }
 
 /**
@@ -27,8 +27,8 @@ void print_args(int argc, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	print_args(argc, argv);
+    print_args(argc, argv);
 
-	return (0);
+    return (0);
 }
 
