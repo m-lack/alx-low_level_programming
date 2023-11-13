@@ -26,13 +26,13 @@ int is_prime(long n) {
 
 long largest_prime_factor(long n) {
     long largest = -1;
+    long i;
 
     while (n % 2 == 0) {
         largest = 2;
         n /= 2;
     }
 
-    long i;
     for (i = 3; i <= sqrt(n); i += 2) {
         while (n % i == 0) {
             largest = i;
@@ -55,4 +55,3 @@ int main() {
 
     return 0;
 }
-
