@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * count_arguments - counts the number of arguments
@@ -31,16 +30,5 @@ int main(int argc, char *argv[])
     _putchar('\n');
 
     return (0);
-}
-
-/**
- * _putchar - writes a character to the standard output
- * @c: the character to print
- *
- * Return: On success, 1. On error, -1 is returned.
- */
-int _putchar(char c)
-{
-    return write(1, &c, 1);
 }
 
