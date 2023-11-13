@@ -9,8 +9,8 @@
  */
 int count_arguments(int argc, char *argv[])
 {
-    (void)argv; /* Suppress unused parameter warning */
-    return argc - 1;
+	(void)argv; /* Suppress unused parameter warning */
+	return (argc - 1);
 }
 
 /**
@@ -22,13 +22,13 @@ int count_arguments(int argc, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-    int num_args;
+	int num_args;
 
-    num_args = count_arguments(argc, argv);
+	num_args = count_arguments(argc, argv);
 
-    _putchar(num_args + '0');
-    _putchar('\n');
+	_putchar(num_args + '0');
+	_putchar('\n');
 
-    return (0);
+	return (0);
 }
 
