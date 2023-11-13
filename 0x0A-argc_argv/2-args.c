@@ -7,7 +7,7 @@
  */
 void print_args(int argc, char *argv[])
 {
-    int i; // Move the declaration outside the loop
+    int i; /* Move the declaration outside the loop */
     for (i = 0; i < argc; i++)
     {
         _puts(argv[i]);
