@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h> /* Include the header file for write function */
 #include <stdio.h>
 
 /**
@@ -41,5 +42,3 @@ int _putchar(char c)
 {
 	return write(1, &c, 1);
 }
-
-
