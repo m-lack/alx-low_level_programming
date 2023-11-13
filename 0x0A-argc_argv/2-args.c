@@ -19,6 +19,32 @@ void print_args(int argc, char *argv[])
 }
 
 /**
+ * _puts - prints a string followed by a new line
+ * @str: the string to print
+ *
+ * Return: None
+ */
+void _puts(char *str)
+{
+    while (*str)
+    {
+        _putchar(*str);
+        str++;
+    }
+}
+
+/**
+ * _putchar - writes a character to the standard output (stdout)
+ * @c: the character to print
+ *
+ * Return: On success, 1 is returned. On error, -1 is returned.
+ */
+int _putchar(char c)
+{
+    return write(1, &c, 1);
+}
+
+/**
  * main - entry point of the program
  * @argc: argument count
  * @argv: argument vector
