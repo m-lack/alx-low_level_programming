@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export CFILE=0-main.c
+
 if [ -z "$CFILE" ]; then
   echo "CFILE variable is not set. Please set CFILE to the name of the C file you want to convert."
   exit 1
@@ -12,4 +14,3 @@ OUTPUT_FILE="$FILENAME.s"
 gcc -S -masm=intel "$CFILE" -o "$OUTPUT_FILE"
 
 echo "Assembly code generated and saved in $OUTPUT_FILE"
-
