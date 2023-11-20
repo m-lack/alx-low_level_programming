@@ -2,57 +2,60 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-
 /**
- * check_num - check if string contains only digits
- * @str: input string
+ * check_num - check - string there are digit
+ * @str: array str
  *
- * Return: 1 if all characters are digits, 0 otherwise
+ * Return: Always 0 (Success)
  */
 int check_num(char *str)
 {
-    unsigned int count = 0;
+	/*Declaring variables*/
+	unsigned int count;
 
-    while (count < strlen(str))
-    {
-        if (!isdigit(str[count]))
-        {
-            return (0);
-        }
-        count++;
-    }
-    return (1);
+	count = 0;
+	while (count < strlen(str)) /*count string*/
+	{
+		if (!isdigit(str[count])) /*check if str there are digit*/
+		{
+			return (0);
+		}
+		count++;
+	}
+	return (1);
 }
 
 /**
- * main - adds positive numbers
- * @argc: argument count
- * @argv: argument vector
+ * main - Print the name of the program
+ * @argc: Count arguments
+ * @argv: Arguments
  *
- * Return: 0 on success, 1 on error
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-    int count, str_to_int, sum = 0;
+	/*Declaring variables*/
+	int count;
+	int str_to_int;
+	int sum = 0;
 
-    count = 1;
-    while (count < argc)
-    {
-        if (check_num(argv[count]))
-        {
-            str_to_int = atoi(argv[count]);
-            sum += str_to_int;
-        }
-        else
-        {
-            printf("Error\n");
-            return (1);
-        }
-        count++;
-    }
-
-    printf("%d\n", sum);
-
-    return (0);
+	count = 1;
+	while (count < argc) /*Goes through the whole array*/
+	{
+	if (check_num(argv[count]))
+	{
+	str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
+	sum += str_to_int;
+	}
+	/*Condition if one of the number contains symbols that are not digits*/
+		else
+		{
+		printf("Error\n");
+		return (1);
+		}
+		count++;
+	}
+	printf("%d\n", sum); /*print sum*/
+	return (0);
 }
 
