@@ -1,17 +1,15 @@
 #include <stdio.h>
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-    int digit = 0;
+	int a;
 
-    while (digit <= 9)
-    {
-        putchar(digit + '0'); 
-        digit++;
-    }
-
-    putchar('\n');
-
-    return (0);
+	for (a = 0; a < 10; a++)
+		printf("%d", a);
+	putchar('\n');
+	return (0);
 }
-
