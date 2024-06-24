@@ -1,37 +1,35 @@
 #include <stdio.h>
-
+/**
+ * main - prints all possible different combinations of these digits
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-    int digit1, digit2, digit3;
+	int ones = '0';
+	int tens = '0';
+	int hundreds = '0';
 
-    digit1 = 0;
-    while (digit1 <= 7)
-    {
-        digit2 = digit1 + 1;
-        while (digit2 <= 8)
-        {
-            digit3 = digit2 + 1;
-            while (digit3 <= 9)
-            {
-                putchar(digit1 + '0');
-                putchar(digit2 + '0');
-                putchar(digit3 + '0');
-
-                if (digit1 != 7 || digit2 != 8 || digit3 != 9)
-                {
-                    putchar(',');
-                    putchar(' ');
-                }
-
-                digit3++;
-            }
-            digit2++;
-        }
-        digit1++;
-    }
-
-    putchar('\n');
-
-    return (0);
+	for (hundreds = '0'; hundreds <= '9'; hundreds++)
+	{
+		for (tens = '0'; tens <= '9'; tens++)
+		{
+			for (ones = '0'; ones <= '9'; ones++)
+			{
+				if (!((ones == tens) || (tens == hundreds) ||
+							(tens > ones) || (hundreds > tens)))
+				{
+					putchar(hundreds);
+					putchar(tens);
+					putchar(ones);
+					if (!(ones == '9' && hundreds == '7' && tens == '8'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
-
