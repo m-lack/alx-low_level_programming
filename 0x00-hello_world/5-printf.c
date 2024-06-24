@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * main - Program Prints a Line Using The Printf Function
+ * Return: 0 (Success)
+ */
 
 int main(void)
 {
