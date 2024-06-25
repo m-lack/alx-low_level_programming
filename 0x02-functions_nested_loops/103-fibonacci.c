@@ -1,22 +1,25 @@
 #include <stdio.h>
-
+/**
+ * main - sum even fibonacci numbers under 4 million.
+ * Return: Nothing.
+ */
 int main(void)
 {
-    long int fib1 = 1, fib2 = 2, next, sum = 2;
+	unsigned long count, i, j, k, sums;
 
-    while (1)
-    {
-        next = fib1 + fib2;
-        if (next > 4000000)
-            break;
-        if (next % 2 == 0)
-            sum += next;
-        fib1 = fib2;
-        fib2 = next;
-    }
+	i = sums = 0;
+	j = 1;
 
-    printf("%ld\n", sum);
-
-    return (0);
+	for (count = 0; count < 50; count++)
+	{
+		k = i + j;
+		i = j;
+		j = k;
+		if (k % 2 == 0 && k < 4000000)
+		{
+			sums += k;
+		}
+	}
+	printf("%lu\n", sums);
+	return (0);
 }
-
