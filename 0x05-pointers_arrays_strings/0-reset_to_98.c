@@ -1,11 +1,25 @@
 #include "main.h"
+
 /**
- * reset_to_98 - a function that takes a pointer to an int as parameter
- * and updates the value it points to to 98
- * @n: input
- * Return: n
+ * print_square - prints a square, followed by a new line;
+ * @size: size of the square
  */
-void reset_to_98(int *n)
+void print_square(int size)
 {
-	*n = 98;
+int i, j;
+if (size <= 0)
+{
+_putchar('\n');
+}
+else
+{
+for (i = 0; i < size; i++)
+{
+for (j = 0; j < size; j++)
+{
+_putchar('#');
+}
+_putchar('\n');
+}
+}
 }
