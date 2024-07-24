@@ -44,4 +44,3 @@ while (n < len2 && i < (len1 + n))
 
 	return (s);
 }
-
