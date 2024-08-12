@@ -1,30 +1,33 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle of '#' characters.
- * @size: size of the triangle.
+ * print_triangle - Prints a triangle of squares according parameter
+ * @size: The size of the squares triangle
+ * Return: empty
  */
+
 void print_triangle(int size)
+
 {
-    if (size <= 0) {
-        _putchar('\n');
-        return;
-    }
+	int x, y, z;
 
-    int row, col, space;
-
-    for (row = 1; row <= size; row++) {
-        // Print spaces
-        for (space = size - row; space > 0; space--) {
-            _putchar(' ');
-        }
-
-        // Print '#' characters
-        for (col = 1; col <= row; col++) {
-            _putchar('#');
-        }
-
-        // Print newline after each row
-        _putchar('\n');
-    }
+	if (size <= 0)
+	{
+	_putchar('\n');
+	}
+	else
+	{
+	for (x = 0; x < size; x++)
+	{
+	for (y = size - x; y > 1; y--)
+	{
+	_putchar(32);
+	}
+	for (z = 0; z <= x; z++)
+	{
+	_putchar(35);
+	}
+	_putchar('\n');
+	}
+	}
 }
